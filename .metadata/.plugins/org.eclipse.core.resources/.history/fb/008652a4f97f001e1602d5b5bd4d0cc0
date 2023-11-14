@@ -1,0 +1,55 @@
+package com.srimanth.registration.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.srimanth.registration.dto.RequestDto;
+import com.srimanth.registration.entity.Userdata;
+import com.srimanth.registration.repository.AuthRepository;
+
+
+@Service
+public class AuthService {
+
+	@Autowired
+	private AuthRepository repo;
+	
+	
+	//register
+	public String register(RequestDto requestDto) {
+		Userdata data=new Userdata(requestDto.getFirstName(),requestDto.getLastName(),requestDto.getEmail(),requestDto.getPassword());
+		//String email=data.getEmail();
+		//Userdata data1=repo.findByEmail(requestDto.getEmail());
+		//String email1=data1.getEmail();
+		//if(email.equals(email1)) {
+		//	return "User already exists";
+		//}
+		//else {
+			repo.save(data);
+		//}
+		return "User Registration Sucessful";
+	}
+	//login
+	public String login(RequestDto requestDto) {
+	    Userdata data = new Userdata(requestDto.getEmail(), requestDto.getPassword());
+	    if(data.getEmail().equals(repo.getByEmail(data.getEmail()).toString())) {
+	    	return "login sucessful";
+	    }else {
+			return "login unsucessful";
+		}
+	   
+
+	   
+	}
+
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

@@ -1,0 +1,4 @@
+FROM openjdk:17
+ADD target/Eureka-Server-Microservice.jar Eureka-Server-Microservice.jar
+ENTRYPOINT ["java", "-jar", "/Eureka-Server-Microservice.jar"]
+EXPOSE 8080

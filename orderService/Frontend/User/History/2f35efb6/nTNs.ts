@@ -1,0 +1,30 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class RegistrationServiceService {
+
+  constructor(private http:HttpClient) { }
+
+  
+public doRegister(user:any){
+return this.http.post("http://localhost:5959/Auth/register",user,{responseType:'text' as 'json'});
+}
+
+public doLogin(logger:any){
+return this.http.post("http://localhost:5959/Auth/login",logger,{responseType:'text' as 'json'})
+}
+
+public doPurchase(purch:any){
+  return this.http.post("http://localhost:5959/Order/bookOrder",purch,{responseType:'text' as 'json'});
+}
+
+public doGetAll(){
+  return this.http.get("http://localhost:5959/Order/getAll");
+}
+public doViewPayments(){
+  return this.http.get("http://localhost:5959/Payment/viewPayments");
+}
+}

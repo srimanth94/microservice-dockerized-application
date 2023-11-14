@@ -1,0 +1,38 @@
+package com.srimanth.auth.service.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.srimanth.auth.service.dto.RequestDto;
+import com.srimanth.auth.service.entity.Users;
+import com.srimanth.auth.service.service.AuthService;
+
+import ch.qos.logback.core.model.Model;
+
+@Controller
+@RequestMapping("/register")
+
+public class authController {
+	
+	@Autowired
+	private AuthService service;
+	
+	@GetMapping
+	public String registration() {
+		return "register";
+	}
+	@ModelAttribute("user")
+	public RequestDto requestDto() {
+		return new RequestDto();
+	}
+	@PostMapping("/save")
+	public String register(@ModelAttribute("user") RequestDto requestDto) {
+		service.register(requestDto);
+		return "successful";
+	}
+}

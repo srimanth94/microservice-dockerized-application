@@ -1,0 +1,32 @@
+package com.srimanth.registration.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.srimanth.registration.dto.RequestDto;
+import com.srimanth.registration.entity.Userdata;
+import com.srimanth.registration.repository.UserRepository;
+
+@Service
+public class UserService implements UserServiceInterface{
+
+	@Autowired
+	private UserRepository repo;
+	
+	@Override
+	public Userdata register(RequestDto requestDto) {
+	Userdata data=new Userdata(requestDto.getFirstName(),requestDto.getLastName(),requestDto.getEmail(),requestDto.getPassword());
+    return repo.save(data);
+	}
+
+	@Override
+	public String login(RequestDto requestDto) {
+		Userdata data=new Userdata(requestDto.getEmail(),requestDto.getPassword());
+		if(data.getEmail().equals(repo.findByEmail(requestDto.getEmail()).getEmail().toString())) {
+			return "login successful";
+		}
+		else
+		return "login unsucessful";
+	}
+
+}

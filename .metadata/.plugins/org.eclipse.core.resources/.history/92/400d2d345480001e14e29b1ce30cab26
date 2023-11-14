@@ -1,0 +1,21 @@
+package com.srimanth.registration.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.srimanth.registration.dto.RequestDto;
+import com.srimanth.registration.entity.Userdata;
+import com.srimanth.registration.repository.UserRepository;
+
+@Service
+public class UserService implements UserServiceInterface{
+
+	@Autowired
+	private UserRepository repo;
+	
+	@Override
+	public Userdata register(RequestDto requestDto) {
+    return repo.save(requestDto);
+	}
+
+}

@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  eureka-server:
+    image: eureka-server-microservice:latest
+    ports:
+      - $EUREKA_SERVER_LOCAL_PORT:$EUREKA_SERVER_DOCKER_PORT
+    environment:
+      SPRING_PROFILES_ACTIVE: "eureka"
+      EUREKA_CLIENT_REGISTER-WITH-EUREKA: "false"
+      EUREKA_CLIENT_FETCH-REGISTRY: "false"
+
+  cloud-gateway:
+    image: cloud-gateway-service:latest
+    ports:
+      - $GATEWAY_LOCAL_PORT:$GATEWAY_DOCKER_PORT
+    environment:
+      SPRING_PROFILES_ACTIVE: "gateway"
+      SPRING_APPLICATION_NAME: "cloud-gateway"
+      SPRING_CLOUD_GATEWAY_ROUTES_0_URI: "lb://ORDER-SERVICE"
+      SPRING_CLOUD_GATEWAY_ROUTES_0_PREDICATES_0: "Path=/Order/**"
+      SPRING_CLOUD_GATEWAY_ROUTES_1_URI: "lb://PAYMENT-SERVICE"
+      SPRING_CLOUD_GATEWAY_ROUTES_1_PREDICATES_0: "Path=/Payment/**"
+
+      # Eureka Client Configuration
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:$EUREKA_SERVER_LOCAL_PORT/eureka/
+      EUREKA_INSTANCE_PREFERRED_NETWORKS: localhost
+      EUREKA_CLIENT_REGISTER-WITH-EUREKA: "true"
+      EUREKA_CLIENT_FETCH-REGISTRY: "true"
+
+volumes:
+  db: # If not used, you can remove this volume definition
+

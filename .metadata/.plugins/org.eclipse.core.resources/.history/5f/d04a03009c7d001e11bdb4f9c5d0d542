@@ -1,0 +1,25 @@
+version: '3'
+services:
+  # Spring Boot Application
+  spring-app:
+    image: authentication-system-springboot:latest
+    ports:
+      - "9876:8080"
+    environment:
+      - DB_HOST=mysql-db
+      - DB_NAME=sniper
+      - DB_USERNAME=root
+      - DB_PASSWORD=root
+    depends_on:
+      - mysql-db
+
+  # MySQL 5.7 Database
+  mysql-db:
+    image: mysql:5.7
+    container_name: mysql-db
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: sniper
+

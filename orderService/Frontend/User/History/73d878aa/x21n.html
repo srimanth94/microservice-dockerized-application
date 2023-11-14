@@ -1,0 +1,42 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div style="text-align: center">
+    <h1 color="green">{{Purchase}}</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center">Purchase<span class="req"></span></legend>
+
+            
+
+                    <div class="form-group">
+                        <label for="orderName"><span class="req">* </span> orderName: </label>
+                        <input class="form-control" type="text" [(ngModel)]="purch.order.name" name="orderName" id="txt" required
+                            placeholder="Enter OrderName" />
+                        <div id="errFirst"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity"><span class="req">* </span> quantity : </label>
+                        <input class="form-control" type="text" [(ngModel)]="purch.order.quantity" name="quantity" id="txt"
+                            placeholder="Enter quantity" required />
+                        <div id="errLast"></div>
+                    </div>
+
+                
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="placeOrder()">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>

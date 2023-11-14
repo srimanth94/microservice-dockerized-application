@@ -1,0 +1,10 @@
+package com.srimanth.registration.repository;
+
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.srimanth.registration.entity.Userdata;
+
+public interface AuthRepository extends JpaRepository<Userdata, Long>{
+
+}

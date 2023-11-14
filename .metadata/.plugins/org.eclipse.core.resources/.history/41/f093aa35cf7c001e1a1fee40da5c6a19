@@ -1,0 +1,13 @@
+package com.srimanth.registration.service;
+
+import org.springframework.stereotype.Service;
+
+import com.srimanth.registration.repository.AuthRepository;
+
+
+@Service
+public class AuthService {
+
+	
+	private AuthRepository repo;
+}

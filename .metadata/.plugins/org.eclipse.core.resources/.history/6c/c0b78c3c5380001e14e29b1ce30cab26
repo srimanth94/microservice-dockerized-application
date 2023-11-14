@@ -1,0 +1,14 @@
+package com.srimanth.registration.service;
+
+import com.srimanth.registration.dto.RequestDto;
+import com.srimanth.registration.entity.Userdata;
+
+public class UserService implements UserServiceInterface{
+
+	@Override
+	public Userdata register(RequestDto requestDto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

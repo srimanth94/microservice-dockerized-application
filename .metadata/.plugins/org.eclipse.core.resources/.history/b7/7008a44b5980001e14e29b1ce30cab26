@@ -1,0 +1,17 @@
+package com.srimanth.registration.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.srimanth.registration.dto.RequestDto;
+import com.srimanth.registration.entity.Userdata;
+
+
+public interface UserRepository extends JpaRepository<Userdata, Long>{
+
+	Optional<Userdata> findByEmail(String email);
+
+
+}

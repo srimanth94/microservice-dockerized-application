@@ -1,0 +1,8 @@
+package com.srimanth.registration.repository;
+
+import org.hibernate.type.descriptor.converter.spi.JpaAttributeConverter;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AuthRepository extends JpaRepository<Userdata, Long>{
+
+}

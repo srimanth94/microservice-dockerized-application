@@ -1,0 +1,4 @@
+FROM openjdk:17
+ADD target/cloud-gateway-service.jar cloud-gateway-service.jar
+ENTRYPOINT ["java", "-jar", "/cloud-gateway-service.jar"]
+EXPOSE 5959

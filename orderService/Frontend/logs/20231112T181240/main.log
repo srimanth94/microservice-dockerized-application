@@ -1,0 +1,36 @@
+2023-11-12 18:12:41.745 [info] update#setState idle
+2023-11-12 18:13:10.797 [info] update#setState checking for updates
+2023-11-12 18:13:10.799 [info] update#setState idle
+2023-11-12 18:13:33.082 [info] Extension host with pid 288944 exited with code: 0, signal: unknown.
+2023-11-12 18:16:55.552 [warning] No ptyHost heartbeat after 6 seconds
+2023-11-12 18:17:27.027 [warning] No ptyHost heartbeat after 6 seconds
+2023-11-12 18:48:36.285 [warning] No ptyHost heartbeat after 6 seconds
+2023-11-12 18:50:10.475 [warning] No ptyHost heartbeat after 6 seconds
+2023-11-12 22:05:20.250 [info] update#setState checking for updates
+2023-11-12 22:05:20.413 [info] update#setState idle
+2023-11-12 22:51:57.448 [warning] No ptyHost heartbeat after 6 seconds
+2023-11-12 22:58:39.392 [warning] No ptyHost heartbeat after 6 seconds
+2023-11-12 23:05:20.383 [info] update#setState checking for updates
+2023-11-12 23:05:20.891 [info] update#setState idle
+2023-11-12 23:34:43.134 [warning] No ptyHost heartbeat after 6 seconds
+2023-11-12 23:35:11.303 [warning] No ptyHost heartbeat after 6 seconds
+2023-11-12 23:35:18.288 [error] CodeWindow: detected unresponsive
+2023-11-12 23:35:44.985 [warning] No ptyHost heartbeat after 6 seconds
+2023-11-12 23:40:04.280 [warning] No ptyHost heartbeat after 6 seconds
+2023-11-13 11:19:32.673 [info] update#setState checking for updates
+2023-11-13 11:19:32.709 [info] update#setState idle
+2023-11-13 12:19:32.957 [info] update#setState checking for updates
+2023-11-13 12:19:33.503 [info] update#setState idle
+2023-11-13 12:32:43.419 [warning] No ptyHost heartbeat after 6 seconds
+2023-11-13 13:19:33.319 [info] update#setState checking for updates
+2023-11-13 13:19:33.819 [info] update#setState idle
+2023-11-13 15:26:16.482 [warning] No ptyHost heartbeat after 6 seconds
+2023-11-13 16:01:26.948 [info] update#setState checking for updates
+2023-11-13 16:01:27.246 [info] update#setState idle
+2023-11-13 17:01:27.146 [info] update#setState checking for updates
+2023-11-13 17:01:27.605 [info] update#setState idle
+2023-11-13 17:43:55.378 [warning] No ptyHost heartbeat after 6 seconds
+2023-11-13 18:27:34.494 [info] update#setState checking for updates
+2023-11-13 18:27:34.755 [info] update#setState idle
+2023-11-13 19:27:34.706 [info] update#setState checking for updates
+2023-11-13 19:27:35.932 [info] update#setState idle

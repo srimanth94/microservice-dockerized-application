@@ -1,0 +1,5 @@
+package com.srimanth.registration.repository;
+
+public interface AuthRepository {
+
+}

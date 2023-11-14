@@ -1,0 +1,36 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<div class="centered-h1">
+    <h1 style="color: green;">PAYMENT-HISTORY</h1>
+</div>
+
+<div class="container">
+<div class="container">
+    <div class="row col-md-6 col-md-offset-2 custyle">
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>PaymentId</th>
+            <th>paymentStatus</th>
+            <th>transcationId</th>
+            <th>orderId</th>
+            <th>amount</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let payment of Payment">
+            <td>{{payment.paymentId}}</td>
+            <td>{{payment.paymentStatus}}</td>
+            <td>{{payment.transcationId}}</td>
+            <td>{{payment.orderId}}</td>
+            <td>{{payment.amount}}</td>
+          </tr>
+    </tbody>
+    </table>
+    </div>
+</div>

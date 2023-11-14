@@ -1,0 +1,22 @@
+2023-11-12 18:12:49.239 [info] Extension host with pid 288944 started
+2023-11-12 18:12:49.620 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2023-11-12 18:12:49.756 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2023-11-12 18:12:50.015 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-11-12 18:12:50.335 [info] Eager extensions activated
+2023-11-12 18:12:50.360 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-11-12 18:12:50.365 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-11-12 18:13:33.070 [info] Extension host terminating: renderer closed the MessagePort
+2023-11-12 18:13:33.077 [info] Extension host with pid 288944 exiting with code 0
+2023-11-12 18:13:35.182 [info] Extension host with pid 289411 started
+2023-11-12 18:13:35.182 [info] Skipping acquiring lock for /home/srimanth/myeclipse/microservice/orderService/Frontend/User/workspaceStorage/6071eb5dfe646c75ca5ca070f759d587.
+2023-11-12 18:13:35.232 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2023-11-12 18:13:35.239 [info] ExtensionService#_doActivateExtension vscode.npm, startup: true, activationEvent: 'workspaceContains:package.json'
+2023-11-12 18:13:35.488 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-11-12 18:13:36.457 [info] Eager extensions activated
+2023-11-12 18:13:36.462 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-11-12 18:13:36.466 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-11-12 18:13:38.046 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2023-11-12 18:13:56.010 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:typescript'
+2023-11-12 18:13:56.262 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-11-12 18:13:57.650 [info] ExtensionService#_doActivateExtension vscode.html-language-features, startup: false, activationEvent: 'onLanguage:html'
+2023-11-12 18:14:03.825 [info] ExtensionService#_doActivateExtension vscode.css-language-features, startup: false, activationEvent: 'onLanguage:css'

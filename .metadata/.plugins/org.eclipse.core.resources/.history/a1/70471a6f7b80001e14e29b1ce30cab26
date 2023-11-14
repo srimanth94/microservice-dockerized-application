@@ -1,0 +1,4 @@
+FROM openjdk:17
+ADD target/order-microservice-k8s.jar order-microservice-k8s.jar
+ENTRYPOINT ["java", "-jar", "/order-microservice-k8s.jar"]
+EXPOSE 2222

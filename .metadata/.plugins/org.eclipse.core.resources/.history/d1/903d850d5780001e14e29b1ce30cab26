@@ -1,0 +1,9 @@
+package com.srimanth.registration.service;
+
+import com.srimanth.registration.dto.RequestDto;
+import com.srimanth.registration.entity.Userdata;
+
+public interface UserServiceInterface {
+
+	Userdata register(RequestDto requestDto);
+}

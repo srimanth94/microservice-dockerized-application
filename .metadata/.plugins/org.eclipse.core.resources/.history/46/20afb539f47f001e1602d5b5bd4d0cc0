@@ -1,0 +1,13 @@
+package com.srimanth.registration.dto;
+
+import jakarta.persistence.Column;
+
+public class RequestDto {
+
+	private String firstName;
+	private String lastName;
+	private String email;
+	private String password;
+
+
+}

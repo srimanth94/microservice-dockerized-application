@@ -1,0 +1,5 @@
+package com.srimanth.registration.controller;
+
+public class AuthController {
+
+}
