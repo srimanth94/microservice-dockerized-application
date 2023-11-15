@@ -17,7 +17,7 @@ services:
       - mysqldb
       - eureka-server
       - cloud-gateway
-    image: payment-microservice-k8s:latest # Replace with your Docker image name and tag
+    image: agentsudo/payment-microservice-k8s:latest # Replace with your Docker image name and tag
     #network_mode: "host"
     env_file: ./.env
     ports:
@@ -40,7 +40,7 @@ services:
     tty: true
 
   eureka-server:
-    image: eureka-server-microservice:latest # Replace with your Docker image name and tag for the Eureka server
+    image: agentsudo/eureka-server-microservice:latest # Replace with your Docker image name and tag for the Eureka server
     #network_mode: "host"
     ports:
       - $EUREKA_SERVER_LOCAL_PORT:$EUREKA_SERVER_DOCKER_PORT
@@ -50,7 +50,7 @@ services:
       EUREKA_CLIENT_FETCH-REGISTRY: "false"
 
   cloud-gateway:
-    image: cloud-gateway-service:latest
+    image: agentsudo/cloud-gateway-service:latest
     #network_mode: "host"
     ports:
       - $GATEWAY_LOCAL_PORT:$GATEWAY_DOCKER_PORT
@@ -71,7 +71,7 @@ services:
   auth-service:
     depends_on:
       - mysqldb
-    image: auth-microservice-k8s:latest
+    image: agentsudo/auth-microservice-k8s:latest
     env_file: ./.env
     ports:
       - $SPRING1_LOCAL_PORT:$SPRING1_DOCKER_PORT
@@ -91,7 +91,7 @@ services:
     depends_on:
       - mysqldb
       - payment-service
-    image: order-microservice-k8s:latest
+    image: agentsudo/order-microservice-k8s:latest
     env_file: ./.env
     ports:
       - $SPRING2_LOCAL_PORT:$SPRING2_DOCKER_PORT
@@ -107,5 +107,10 @@ services:
         "eureka.client.fetchRegistry": true,
         "eureka.instance.prefer-ip-address": "true"
        }'
+  frontend-service:
+    image: agentsudo/microservice-app:latest
+    env_file: ./.env
+    ports:
+      - $SPRING3_LOCAL_PORT:$SPRING3_DOCKER_PORT
 volumes:
   db:
