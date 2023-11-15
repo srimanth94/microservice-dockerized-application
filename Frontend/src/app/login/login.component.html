@@ -1,0 +1,24 @@
+<!-- login.component.html -->
+
+<div style="text-align: center">
+  <h1 color="green">{{message}}</h1>
+</div>
+<div class="login-container">
+
+    <h2>Login</h2>
+    <form (ngSubmit)="loginNow()">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="logger.email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="logger.password" required>
+      </div>
+      <div>
+    <h1 color="green">{{message}}</h1>
+        <a href="http://localhost:80/home" style="display: block; width: 100%; padding: 10px 0; background-color: #007BFF; color: #fff; text-decoration: none; margin-top: 10px; border: none; cursor: pointer; border-radius: 5px; text-align: center;"  class="button">Login</a>
+  </div>
+      </form>
+  </div>
+  
