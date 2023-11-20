@@ -5,8 +5,8 @@ A micro App which was developed using springboot and angular , which is complete
         2)docker-compose up</br>
         3)navigate to 127.0.0.1
 
-</br>
-![ASD-presentation](https://github.com/srimanth94/microservice-dockerized-application/assets/109428443/35cb874c-6324-4ab9-952b-5e61486636cb)
 
+
+![ASD-presentation](https://github.com/srimanth94/microservice-dockerized-application/assets/109428443/2949b492-dd56-4bba-8608-1ac8dbb4a2c8)
 
 
