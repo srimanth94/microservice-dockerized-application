@@ -7,7 +7,7 @@ A micro App which was developed using springboot and angular , which is complete
 
 </br>
 <img
-  src="/path/to/img.jpg"
+  src="https://github.com/srimanth94/microservice-dockerized-application/blob/main/ASD-presentation.odg"
   alt="Alt text"
   title="Optional title"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
